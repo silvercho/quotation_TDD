@@ -48,11 +48,9 @@ public class Rq {
     public long getParameterAsLong(String paramName, long defaultValue) {
         String parameterValue = getParameter(paramName);
 
-        // 만약 파라미터가 존재하지 않으면 기본값 반환
         if (parameterValue == null) return defaultValue;
 
         try {
-            // 문자열 값을 long으로 변환하여 반환
             return Long.parseLong(parameterValue);
         } catch (NumberFormatException ignored) {
 
