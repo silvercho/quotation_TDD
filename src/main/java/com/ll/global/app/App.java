@@ -23,7 +23,7 @@ public class App {
         while (true) {
             final String cmd = scanner.nextLine().trim();
 
-            switch (cmd) {
+            switch (cmd) { // ->를 넣으면 break;문을 안써도 된다!
                 case "등록" -> {
                     System.out.print("명언 : ");
                     final String content = scanner.nextLine().trim();
