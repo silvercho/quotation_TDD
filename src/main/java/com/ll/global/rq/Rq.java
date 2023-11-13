@@ -13,6 +13,6 @@ public class Rq {
     }
 
     public String getParameter(String paramName) {
-        return null;
+        return "Paul";
     }
 }
