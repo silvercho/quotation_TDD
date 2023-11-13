@@ -15,11 +15,14 @@ public class AppTest {
     @Test
     @DisplayName("프로그램 시작 시 \"== 명언 앱 ==\" 출력")
     void t1(){
+        Scanner scanner = TestUtil.genScanner("""
+                종료
+                """.stripIndent());
         // 표준 출력을 ByteArrayOutputStream 으로 변경하여 출력을 캡쳐합니다.
         ByteArrayOutputStream byteArrayOutputStream = TestUtil.setOutToByteArray();
 
         // 명언 앱의 인스턴스를 생성합니다.
-        new App().run();
+        new App(scanner).run();
     // ByteArrayOutputStream 에 저장된 출력을 문자열로 가져옵니다.
         String out = byteArrayOutputStream.toString().trim();
 
