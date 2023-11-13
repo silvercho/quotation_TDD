@@ -45,6 +45,6 @@ public class RqTest {
 
         String age = rq.getParameter("나이", "100");
 
-        assertThat(age).isEqualTo(100);
+        assertThat(age).isEqualTo("100");
     }
 }
