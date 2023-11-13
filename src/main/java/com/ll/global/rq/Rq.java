@@ -44,4 +44,8 @@ public class Rq {
         return params.getOrDefault(paramName,defaultValue);
         // 맵에서 파라미터 이름에 해당하는 값 , 맵의 기능
     }
+
+    public long getParameterAsLong(String paramName, long defaultValue) {
+        return defaultValue;
+    }
 }
