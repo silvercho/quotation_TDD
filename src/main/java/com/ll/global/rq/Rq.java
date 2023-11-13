@@ -37,11 +37,11 @@ public class Rq {
     }
 
     public String getParameter(String paramName) {
-        return params.get(paramName);
+        return getParameter(paramName, null);
     }
     public String getParameter(final String paramName, final String defaultValue) {
         // 메서드 내용이 아직 구현되지 않아서 항상 defaultValue를 반환
         return params.getOrDefault(paramName,defaultValue);
-        // 맵에서 파라미터 이름에 해당하는 값 가져오기
+        // 맵에서 파라미터 이름에 해당하는 값 , 맵의 기능
     }
 }
