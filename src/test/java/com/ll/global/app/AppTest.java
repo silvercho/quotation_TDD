@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
+import java.util.Scanner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -28,5 +29,19 @@ public class AppTest {
         // 가져온 출력 문자열에 "== 명언 앱 =="이 포함되어 있는지를 검증합니다.
         assertThat(out)
                 .contains("== 명언 앱 ==");
+    }
+
+    @Test
+    @DisplayName("종료")
+    void t2() {
+        Scanner scanner = TestUtil.genScanner("""
+                종료
+                """.stripIndent());
+        ByteArrayOutputStream byteArrayOutputStream = TestUtil.setOutToByteArray();
+        new App(scanner).run();
+
+        String out = byteArrayOutputStream.toString().trim();
+        TestUtil.clearSetOutToByteArray(byteArrayOutputStream);
+
     }
 }
