@@ -1,7 +1,6 @@
 package com.ll.global.rq;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -39,5 +38,9 @@ public class Rq {
 
     public String getParameter(String paramName) {
         return params.get(paramName);
+    }
+    public String getParameter(final String paramName, final String defaultValue) {
+        // 메서드 내용이 아직 구현되지 않아서 항상 defaultValue를 반환
+        return null;
     }
 }
