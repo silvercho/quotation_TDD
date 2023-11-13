@@ -24,6 +24,11 @@ public class App {
             final String cmd = scanner.nextLine().trim();
 
             switch (cmd) { // ->를 넣으면 break;문을 안써도 된다!
+                case "삭제?id=1" -> {
+                    quotations
+                            .removeIf(quotation -> quotation.getId() == 1);
+                    System.out.println("1번 명언이 삭제되었습니다.");
+                }
                 case "등록" -> {
                     System.out.print("명언 : ");
                     final String content = scanner.nextLine().trim();
