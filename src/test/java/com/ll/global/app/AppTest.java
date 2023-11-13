@@ -18,7 +18,7 @@ public class AppTest {
         ByteArrayOutputStream byteArrayOutputStream = TestUtil.setOutToByteArray();
 
         // 명언 앱의 인스턴스를 생성합니다.
-        new App();
+        new App().run();
     // ByteArrayOutputStream 에 저장된 출력을 문자열로 가져옵니다.
         String out = byteArrayOutputStream.toString().trim();
 
