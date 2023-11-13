@@ -8,11 +8,11 @@ import java.util.Scanner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TestUtillTest {
+public class TestUtilTest {
     @Test
     @DisplayName("IOUtill.genScanner() 테스트")
     void t1(){
-        Scanner scanner = TestUtill.genScanner("""
+        Scanner scanner = TestUtil.genScanner("""
                 등록
                 나의 죽음을 적에게 알리지 말라!
                 이순신
@@ -27,14 +27,14 @@ public class TestUtillTest {
         // assertThat 은 테스트에서 예상결과와 실제 결과를 비교하는데 사용됩니다.
     }
     @Test
-    @DisplayName("IOUtill.setOutToByteArray() 테스트")
+    @DisplayName("IOUtil.setOutToByteArray() 테스트")
     void t2() {
-        ByteArrayOutputStream byteArrayOutputStream = TestUtill.setOutToByteArray();
+        ByteArrayOutputStream byteArrayOutputStream = TestUtil.setOutToByteArray();
 
         System.out.println("2 / 이순신 / 나의 죽음을 적들에게 알리지 말라!");
 
         String out = byteArrayOutputStream.toString().trim();
-        TestUtill.clearSetOutToByteArray(byteArrayOutputStream);
+        TestUtil.clearSetOutToByteArray(byteArrayOutputStream);
 
         assertThat(out).isEqualTo("2 / 이순신 / 나의 죽음을 적들에게 알리지 말라!");
 

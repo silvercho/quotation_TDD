@@ -2,4 +2,7 @@
 
 1. TestUtill
 2. TDD
-3. 
+
+- com.ll.global <전체모듈에서 공유하는>
+- com.ll.domain < 모듈들 >
+- com.ll.standard < 다른프로젝트에서도 쓸법한것들 >

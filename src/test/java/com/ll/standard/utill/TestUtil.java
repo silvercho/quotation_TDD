@@ -3,7 +3,7 @@ package com.ll.standard.utill;
 import java.io.*;
 import java.util.Scanner;
 
-public class TestUtill {
+public class TestUtil {
     // gen == generate 생성하다.
     // 자바에서 사용되는 유틸리티(도구) 클래스인 TestUtill 이다.
 
